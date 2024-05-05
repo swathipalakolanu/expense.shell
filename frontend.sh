@@ -9,6 +9,7 @@ rm -rf /usr/share/nginx/html/*
 
 echo -e "\e[33m Dowloading the frontend content\e[0m"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip
+cd /usr/share/nginx/html
 
 echo -e "\e[34munzip the undowloaded content\e[0m"
 unzip /tmp/frontend.zip
