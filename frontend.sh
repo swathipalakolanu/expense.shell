@@ -1,28 +1,30 @@
 rm -rf /tmp/expense.log
-
-echo -e "\e[32mInstalling the nginx server\e[0m"
+Heading(){
+  echo -e "/e32m$*/e[0m"
+}
+Heading Installing the nginx server
 dnf install nginx -y &>>/tmp/expense.log
 echo exit status - $?
 
-echo -e "\e[32mCopying the expense file\e[0m"
+Heading Copying the expense file
 cp expense.conf /ect/nginx/default.d/expense.conf &>>/tmp/expense.log
 echo exit status - $?
 
-echo -e "\e[35mDeleting the previous content\e[0m"
+Heading Deleting the previous content
 rm -rf /usr/share/nginx/html/* &>>/tmp/expense.log
 echo exit status - $?
 
-echo -e "\e[33m Dowloading the frontend content\e[0m"
+Heading Dowloading the frontend content
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>>/tmp/expense.log
 echo exit status - $?
 cd /usr/share/nginx/html
 
 
-echo -e "\e[32mUnzip the undowloaded content\e[0m"
+Heading Unzip the undowloaded content
 unzip /tmp/frontend.zip &>>/tmp/expense.log
 echo exit status -  $?
 
-echo -e "\e[32mRestarting the nginx\e[0m"
+Heading Restarting the nginx
 systemctl restart nginx
 systemctl start nginx
 echo exit status - $?
