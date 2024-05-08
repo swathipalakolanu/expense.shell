@@ -1,6 +1,6 @@
 rm -rf /tmp/expense.log
 Heading(){
-  echo -e "/e32m$*/e[0m"
+  echo -e "\e32m$*\e[0m"
 }
 Heading Installing the nginx server
 dnf install nginx -y &>>/tmp/expense.log
