@@ -1,12 +1,14 @@
 print_hello(){
-  x=20
 
+echo x from the main program $x
  echo HelloWorld
- echo Y value is $y
+  y=30
  }
  print_hello
- echo x value is $x
- y=30
+
+  x=20
+ echo Y value form the function is $y
+
  input_function(){
    echo First argument $0
    echo Second Argument $1
