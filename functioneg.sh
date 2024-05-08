@@ -9,7 +9,7 @@ print_hello(){
  y=30
  input_function(){
    echo First argument $0
-   echo Second Argument $2
+   echo Second Argument $1
    echo All Arguments $*
    }
- input_function()
+ input_function() 123 456
