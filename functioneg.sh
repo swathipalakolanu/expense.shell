@@ -4,9 +4,10 @@ echo x from the main program - $x
  echo HelloWorld
   y=30
  }
+ x=40
  print_hello
 
-  x=20
+  #x=20
  echo Y value form the function is - $y
 
  input_function(){
