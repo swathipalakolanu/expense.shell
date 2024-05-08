@@ -12,4 +12,4 @@ print_hello(){
    echo Second Argument $1
    echo All Arguments $*
    }
- input_function() 123 456
+ input_function 123 456
